@@ -435,7 +435,7 @@ nav {
 				height: 2.6rem;
 				opacity: 0;
 				transform: rotate(-30deg);
-				
+				transition: all .4s cubic-bezier(.175,.885,.32,1.275);
 				background: url(../img/top_fuck.png);
 			}
 			.fuck {
@@ -445,6 +445,7 @@ nav {
 				width: 19rem;
 				height: 10.5rem;
 				opacity: 0;
+				transition: .4s;
 				background: url(../img/fuck.png);
 				text-transform: uppercase;
 				color: #fff;
@@ -486,22 +487,20 @@ nav {
 				height: 2.9rem;
 				opacity: 0;
 				transform: rotate(-30deg);
+				transition: all .4s cubic-bezier(.175,.885,.32,1.275);
 				background: url(../img/bot_fuck.png);
 			}
 			&:hover .top-fuck {
-				transition: all .7s cubic-bezier(.175,.885,.32,1.275);
 				transform: rotate(0deg);
 				top: 2.4rem;
 				left: 2.1rem;
 			}
 			&:hover .bot-fuck {
-				transition: all .7s cubic-bezier(.175,.885,.32,1.275);	
 				transform: rotate(0deg);
 				bottom: 3.1rem;
 				right: 5rem;
 			}
 			&:hover .fuck, &:hover .top-fuck, &:hover .bot-fuck {
-				transition: all .7s cubic-bezier(.175,.885,.32,1.275);
 				opacity: 1;
 			}
 		}
