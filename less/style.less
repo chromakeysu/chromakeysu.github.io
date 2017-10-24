@@ -710,6 +710,22 @@ nav {
 		}
 	}
 }
+@keyframes onload {
+    from {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        margin-top: 25px;
+        margin-left: 25px;
+    }
+    to {
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
 .categories {
 	.divider_right {
 		right: -1.5rem;
@@ -730,12 +746,15 @@ nav {
 			height: 5rem;
 			border-radius: 100%;
 			background-color: @background;
-			opacity: 1;
-			left: 37rem;
+			opacity: 0;
+			left: 36.5rem;
 			top: 2rem;
+			opacity: 0;
+			    
 		}
-		&:hover {
-
+		&:hover .genre-hover{
+			animation: onload .5s linear;
+			animation-fill-mode: forwards;
 		}
 	}
 	.action {
@@ -751,7 +770,7 @@ nav {
 			background: url(../img/icons/action.png) center no-repeat;
 			background-size: 75%;
 			position: absolute;
-			left: -5rem;
+			left: -5.5rem;
 			top: 2rem;
 		}
 	}	
