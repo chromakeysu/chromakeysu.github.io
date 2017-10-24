@@ -162,6 +162,10 @@ ul {
 		input {
 			padding-left: 1rem;
 			border: none;
+			border: 1px solid rgba(0, 125, 32, 63);
+			&:focus {
+				box-shadow: 0px 0px 13px 0px @background inset;
+			}
 		}
 		.search {
 				position: absolute;
@@ -308,78 +312,6 @@ nav {
 		}
 	}
 }
-.information_action {
-	.info {
-		margin-left: 4rem;
-		h2 {
-			margin-top: 1rem;
-		}
-		&:before {
-			content: '';
-			width: 5rem;
-			height: 4rem;
-			background: url(../img/icons/action.png) center no-repeat;
-			background-size: 75%;
-			position: absolute;
-			left: -4.6rem;
-			top: .4rem;
-		}
-	}
-}
-.information_strategy {
-	.info {
-		margin-left: 4rem;
-		h2 {
-			margin-top: 1rem;
-		}
-		&:before {
-			content: '';
-			width: 5rem;
-			height: 5rem;
-			background: url(../img/icons/strategy.png) center no-repeat;
-			background-size: 75%;
-			position: absolute;
-			left: -5rem;
-			top: 0;
-		}
-	}
-}
-.information_simulators {
-	.info {
-		margin-left: 4rem;
-		h2 {
-			margin-top: 1rem;
-		}
-		&:before {
-			content: '';
-			width: 5rem;
-			height: 4rem;
-			background: url(../img/icons/simulators.png) center no-repeat;
-			background-size: 75%;
-			position: absolute;
-			left: -5rem;
-			top: .6rem;
-		}
-	}
-}
-.information_rpg {
-	.info {
-		margin-left: 4rem;
-		h2 {
-			margin-top: 1rem;
-		}
-		&:before {
-			content: '';
-			width: 5rem;
-			height: 5rem;
-			background: url(../img/icons/rpg.png) center no-repeat;
-			background-size: 75%;
-			position: absolute;
-			left: -5rem;
-			top: 0;
-		}
-	}
-}
 .information_coop {
 	.info {
 		margin-left: 4rem;
@@ -503,7 +435,7 @@ nav {
 				height: 2.6rem;
 				opacity: 0;
 				transform: rotate(-30deg);
-				transition: .7s;
+				
 				background: url(../img/top_fuck.png);
 			}
 			.fuck {
@@ -513,7 +445,6 @@ nav {
 				width: 19rem;
 				height: 10.5rem;
 				opacity: 0;
-				transition: .7s;
 				background: url(../img/fuck.png);
 				text-transform: uppercase;
 				color: #fff;
@@ -555,20 +486,22 @@ nav {
 				height: 2.9rem;
 				opacity: 0;
 				transform: rotate(-30deg);
-				transition: .7s;
 				background: url(../img/bot_fuck.png);
 			}
 			&:hover .top-fuck {
+				transition: all .7s cubic-bezier(.175,.885,.32,1.275);
 				transform: rotate(0deg);
 				top: 2.4rem;
 				left: 2.1rem;
 			}
 			&:hover .bot-fuck {
+				transition: all .7s cubic-bezier(.175,.885,.32,1.275);	
 				transform: rotate(0deg);
 				bottom: 3.1rem;
 				right: 5rem;
 			}
 			&:hover .fuck, &:hover .top-fuck, &:hover .bot-fuck {
+				transition: all .7s cubic-bezier(.175,.885,.32,1.275);
 				opacity: 1;
 			}
 		}
@@ -779,8 +712,117 @@ nav {
 	}
 }
 .categories {
+	.divider_right {
+		right: -1.5rem;
+		top: 50%;
+	}
+	.divider_left {
+		left: -1.5rem;
+		top: 50%;
+	}
 	&-block {
 		margin-top: 1rem;
+	}
+	.link-genre {
+		color: @text;
+		.genre-hover {
+			position: absolute;
+			width: 5rem;
+			height: 5rem;
+			border-radius: 100%;
+			background-color: @background;
+			opacity: 1;
+			left: 37rem;
+			top: 2rem;
+		}
+		&:hover {
+
+		}
+	}
+	.action {
+		position: relative;
+		margin-left: 4rem;
+		h2 {
+			margin-top: 3rem;
+		}
+		&:before {
+			content: '';
+			width: 5rem;
+			height: 5rem;
+			background: url(../img/icons/action.png) center no-repeat;
+			background-size: 75%;
+			position: absolute;
+			left: -5rem;
+			top: 2rem;
+		}
+	}	
+	.strategy {
+		position: relative;
+		margin-left: 4rem;
+		h2 {
+			margin-top: 3rem;
+		}
+		&:before {
+			content: '';
+			width: 5rem;
+			height: 5rem;
+			background: url(../img/icons/strategy.png) center no-repeat;
+			background-size: 75%;
+			position: absolute;
+			left: -5rem;
+			top: 2rem;
+		}
+	}
+	.simulators {
+		position: relative;
+		margin-left: 4rem;
+		h2 {
+			margin-top: 3rem;
+		}
+		&:before {
+			content: '';
+			width: 5rem;
+			height: 4rem;
+			background: url(../img/icons/simulators.png) center no-repeat;
+			background-size: 75%;
+			position: absolute;
+			left: -5rem;
+			top: 2rem;
+		}
+	}
+	.rpg {
+		position: relative;
+		margin-left: 4rem;
+		h2 {
+			margin-top: 3rem;
+		}
+		&:before {
+			content: '';
+			width: 5rem;
+			height: 5rem;
+			background: url(../img/icons/rpg.png) center no-repeat;
+			background-size: 75%;
+			position: absolute;
+			left: -5rem;
+			top: 2rem;
+		}
+	}
+	.coop {
+		position: relative;
+		margin-left: 4rem;
+		h2 {
+			margin-top: 3rem;
+		}
+		&:before {
+			content: '';
+			width: 5rem;
+			height: 4rem;
+			background: url(../img/icons/coop.png) center no-repeat;
+			background-size: 75%;
+			position: absolute;
+			left: -5rem;
+			top: 2.3rem;
+		}
 	}
 }
 .footer {
